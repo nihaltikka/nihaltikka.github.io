@@ -1,0 +1,1326 @@
+:root {
+    --primary-color: #0a192f;
+    --secondary-color: #64ffda;
+    --text-color: #8892b0;
+    --heading-color: #ccd6f6;
+    --bg-color: #0a192f;
+    --card-bg: #112240;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography Improvements */
+body {
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    letter-spacing: 0.01em;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: linear-gradient(120deg, var(--heading-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.section h2 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.skill-card h3, .project-card h3, .timeline-item h3 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+header {
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 0 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+/* Polished Navigation */
+nav ul li a {
+    text-decoration: none;
+    color: var(--heading-color);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--bg-color);
+    padding: 0 150px;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.download-btn, .contact-btn {
+    padding: 1.25rem 1.75rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.download-btn {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+.contact-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.download-btn:hover, .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100,255,218,0.1);
+}
+
+/* Sections */
+/* Consistent Spacing */
+.section {
+    padding: 120px 150px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.skill-card, .project-card, .timeline-item, .contact-item {
+    padding: 2.5rem;
+}
+
+.section h2 {
+    color: var(--heading-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section h2 i {
+    color: var(--secondary-color);
+}
+
+/* Skills section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.skill-card ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Experience timeline */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    margin-bottom: 2rem;
+}
+
+.timeline-item h3 {
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item .company {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-item ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Certifications */
+/* Certification Logos */
+.cert-title {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    margin: 3rem 0 2rem;
+    text-align: center;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cert-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 40px -20px rgba(100,255,218,0.2);
+}
+
+.cert-logo {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-logo {
+    transform: scale(1.02);
+}
+
+.cert-card:hover .cert-logo {
+    transform: scale(1.02);
+}
+
+.cert-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.cert-card h3 {
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Contact section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--heading-color);
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 4px;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    color: var(--secondary-color);
+}
+
+.contact-item i {
+    color: var(--secondary-color);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-top: 1px solid rgba(100,255,218,0.1);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 1080px) {
+    .section {
+        padding: 100px 100px;
+    }
+    
+    .hero {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* General adjustments */
+    .section {
+        padding: 40px 20px;
+    }
+    
+    .hero {
+        padding: 0 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Skills and certifications */
+    .skills-grid, .cert-grid, .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Certification cards */
+    .cert-card {
+        padding: 1.5rem;
+    }
+    
+    .cert-logo {
+        width: 80px;
+        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    
+    /* Experience timeline */
+    .timeline-item {
+        padding: 1.5rem;
+    }
+    
+    /* Contact section */
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* CTA buttons */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .download-btn, .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Projects section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.project-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-card ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-card ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-tech span {
+    color: var(--secondary-color);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tech {
+    margin-bottom: 1rem;
+}
+
+/* 3D Effects for Cards - Reverted to Previous Style */
+.skill-card, .project-card, .timeline-item, .contact-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover, .project-card:hover, .timeline-item:hover, .contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
+}
+
+/* Revert Button Effects */
+.download-btn, .contact-btn {
+    padding: 1.25rem 1.75rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.download-btn:hover, .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100,255,218,0.1);
+}
+
+/* Revert Social Icons */
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Remove 3D Heading Effects */
+.section h2 {
+    color: var(--heading-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section h2:after {
+    display: none;
+}
+
+/* Remove 3D Hero Section Effects */
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+/* Remove transform-style and perspective properties */
+.skill-card, .project-card, .timeline-item, .contact-item, 
+.download-btn, .contact-btn, .social-links a, 
+.section h2, .hero-content h1 {
+    transform-style: initial;
+    perspective: initial;
+}
+
+/* Remove skill icon rotation */
+.skill-card i {
+    transition: color 0.3s;
+}
+
+.skill-card:hover i {
+    transform: initial;
+}
+
+/* Revert background to solid color */
+body {
+    background: var(--bg-color);
+}
+
+body::before {
+    display: none;
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section animations */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card, .project-card, .timeline-item {
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+.skill-card:nth-child(1) { --animation-order: 1; }
+.skill-card:nth-child(2) { --animation-order: 2; }
+.skill-card:nth-child(3) { --animation-order: 3; }
+.skill-card:nth-child(4) { --animation-order: 4; }
+.skill-card:hover i {
+    transform: translateZ(15px) rotate(10deg);
+}
+
+/* 9. Add a Custom Favicon
+
+Create a simple favicon to make your site look more professional in browser tabs. You can use a free online favicon generator to create one with your initials.
+
+## 10. Optimize for Print
+/* Print Optimization */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section {
+        padding: 20px;
+        page-break-inside: avoid;
+    }
+    
+    header, footer, .cta-buttons {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24pt;
+        color: black;
+    }
+    
+    .hero-content p {
+        font-size: 14pt;
+        color: black;
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 1080px) {
+    .section {
+        padding: 100px 100px;
+    }
+    
+    .hero {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* General adjustments */
+    .section {
+        padding: 40px 20px;
+    }
+    
+    .hero {
+        padding: 0 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Skills and certifications */
+    .skills-grid, .cert-grid, .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Certification cards */
+    .cert-card {
+        padding: 1.5rem;
+    }
+    
+    .cert-logo {
+        width: 80px;
+        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    
+    /* Experience timeline */
+    .timeline-item {
+        padding: 1.5rem;
+    }
+    
+    /* Contact section */
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* CTA buttons */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .download-btn, .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Projects section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.project-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-card ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-card ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-tech span {
+    color: var(--secondary-color);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tech {
+    margin-bottom: 1rem;
+}
+
+/* 3D Effects for Cards */
+/* Improved Card Design */
+.skill-card, .project-card, .timeline-item, .contact-item {
+    background: rgba(17, 34, 64, 0.95);
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.skill-card:hover, .project-card:hover, .timeline-item:hover, .contact-item:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 40px -20px rgba(100,255,218,0.2);
+}
+
+/* 3D Button Effects */
+.download-btn, .contact-btn {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover, .contact-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(100,255,218,0.2);
+}
+
+/* 3D Social Icons */
+.social-links a {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) rotateY(10deg);
+    color: var(--secondary-color);
+}
+
+/* 3D Heading Effects */
+.section h2 {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.section h2:hover {
+    transform: translateZ(10px);
+}
+
+.section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.section h2:hover:after {
+    transform: scaleX(1);
+}
+
+/* 3D Hero Section */
+.hero-content h1::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    color: transparent;
+    text-shadow: 2px 2px 15px rgba(100,255,218,0.3);
+}
+
+.hero-content h1:hover {
+    transform: translateZ(20px);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Subtle parallax effect for background */
+body {
+    background: linear-gradient(135deg, var(--bg-color) 0%, #0d2240 100%);
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section animations */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card, .project-card, .timeline-item {
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+.skill-card:nth-child(1) { --animation-order: 1; }
+.skill-card:nth-child(2) { --animation-order: 2; }
+.skill-card:nth-child(3) { --animation-order: 3; }
+.skill-card:nth-child(4) { --animation-order: 4; }
+.skill-card:hover i {
+    transform: translateZ(15px) rotate(10deg);
+}
+
+/* 9. Add a Custom Favicon
+
+Create a simple favicon to make your site look more professional in browser tabs. You can use a free online favicon generator to create one with your initials.
+
+## 10. Optimize for Print
+/* Print Optimization */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section {
+        padding: 20px;
+        page-break-inside: avoid;
+    }
+    
+    header, footer, .cta-buttons {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24pt;
+        color: black;
+    }
+    
+    .hero-content p {
+        font-size: 14pt;
+        color: black;
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 1080px) {
+    .section {
+        padding: 100px 100px;
+    }
+    
+    .hero {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* General adjustments */
+    .section {
+        padding: 40px 20px;
+    }
+    
+    .hero {
+        padding: 0 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Skills and certifications */
+    .skills-grid, .cert-grid, .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Certification cards */
+    .cert-card {
+        padding: 1.5rem;
+    }
+    
+    .cert-logo {
+        width: 80px;
+        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    
+    /* Experience timeline */
+    .timeline-item {
+        padding: 1.5rem;
+    }
+    
+    /* Contact section */
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* CTA buttons */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .download-btn, .contact-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Projects section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.project-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-card ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-card ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-tech span {
+    color: var(--secondary-color);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tech {
+    margin-bottom: 1rem;
+}
+
+/* 3D Effects for Cards */
+/* Improved Card Design */
+.skill-card, .project-card, .timeline-item, .contact-item {
+    background: rgba(17, 34, 64, 0.95);
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.skill-card:hover, .project-card:hover, .timeline-item:hover, .contact-item:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 40px -20px rgba(100,255,218,0.2);
+}
+
+/* 3D Button Effects */
+.download-btn, .contact-btn {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover, .contact-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(100,255,218,0.2);
+}
+
+/* 3D Social Icons */
+.social-links a {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) rotateY(10deg);
+    color: var(--secondary-color);
+}
+
+/* 3D Heading Effects */
+.section h2 {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.section h2:hover {
+    transform: translateZ(10px);
+}
+
+.section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.section h2:hover:after {
+    transform: scaleX(1);
+}
+
+/* 3D Hero Section */
+.hero-content h1::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    color: transparent;
+    text-shadow: 2px 2px 15px rgba(100,255,218,0.3);
+}
+
+.hero-content h1:hover {
+    transform: translateZ(20px);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Subtle parallax effect for background */
+body {
+    background: linear-gradient(135deg, var(--bg-color) 0%, #0d2240 100%);
+    background-attachment: fixed;
+}
+
+/* Add subtle animation to skill icons */
+.skill-card i {
+    transition: transform 0.5s ease;
+}
+
+.skill-card:hover i {
+    transform: translateZ(15px) rotate(10deg);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Menu toggle animation */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Section animations */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cert-card h3 {
+        font-size: 1rem;
+    }
+}
