@@ -301,7 +301,30 @@ nav ul li a:hover {
     transform: scale(1.02);
 }
 
-.cert-card:hover .cert-logo {
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+}
+
+.project-link i {
+    font-size: 1rem;
+}.cert-card:hover .cert-logo {
     transform: scale(1.02);
 }
 
