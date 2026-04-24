@@ -2,233 +2,437 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#0a192f">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Nihal Tikka - Cybersecurity Professional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fafaf7">
+    <meta name="description" content="Nihal Tikka — Certified Ethical Hacker and Azure Security Engineer with 6+ years in VAPT, bug bounty hunting, and vulnerability management. Helping organizations across finance, healthcare, and other regulated industries stay secure.">
+    <meta name="author" content="Nihal Tikka">
+    <meta property="og:title" content="Nihal Tikka — CEH · Azure Security Engineer · VAPT &amp; Bug Bounty">
+    <meta property="og:description" content="Certified Ethical Hacker and Azure Security Engineer. 6+ years in manual web/mobile pentesting, vulnerability management, and bug bounty hunting across finance and healthcare.">
+    <meta property="og:type" content="website">
+    <title>Nihal Tikka — CEH, Azure Security Engineer &amp; VAPT Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="nav">
+        <a href="#top" class="brand" aria-label="Nihal Tikka home">
+            <span class="brand-mark">NT</span>
+            <span class="brand-name">Nihal Tikka</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#summary">Summary</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <a href="resume.pdf" download class="nav-cta">
+            <i class="fas fa-download"></i>
+            <span>Resume</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 data-text="Nihal Tikka">Nihal Tikka</h1>
-            <p>Vulnerability Management & Penetration Testing Expert</p>
-            <div class="cta-buttons">
-                <a href="resume.pdf" download class="download-btn">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-                <a href="#contact" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Contact Me
-                </a>
-            </div>
-        </div>
-    </section>
+    <div class="progress-bar" aria-hidden="true"><span></span></div>
 
-    <section id="about" class="section">
-        <h2><i class="fas fa-user-shield"></i> About Me</h2>
-        <div class="about-content">
-            <p>Results-driven cybersecurity professional with over 5 years of experience in web application penetration testing, mobile penetration testing and vulnerability management. Expertise in identifying and mitigating security risks across web applications and mobile platforms. Proven track record of leading cross-functional teams to enhance security postures and delivering actionable insights that reduce potential security breaches.</p>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <h2><i class="fas fa-tools"></i> Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-globe"></i>
-                <h3>Web Security</h3>
-                <ul>
-                    <li>Web Application Penetration Testing</li>
-                    <li>DAST Implementation</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile Security</h3>
-                <ul>
-                    <li>Mobile Penetration Testing</li>
-                    <li>Application Security</li>
-                    <li>Vulnerability Assessment</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Security Tools</h3>
-                <ul>
-                    <li>Burp Suite</li>
-                    <li>SQLmap, Nmap</li>
-                    <li>OWASP ZAP</li>
-                    <li>Onapsis, Nessus</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="certifications" class="section">
-        <h3 class="cert-title">Certifications</h3>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <img src="CEH-logo.png" alt="CEH Certification" class="cert-logo" width="100" height="100">
-                <h3>CEH Master</h3>
-                <p>Certified Ethical Hacker</p>
-            </div>
-            <div class="cert-card">
-                <img src="OIP.jpeg" alt="Azure Security Engineer" class="cert-logo" width="100" height="100">
-                <h3>Azure Security Engineer</h3>
-                <p>Microsoft Certified</p>
-            </div>
-            <div class="cert-card">
-                <img src="purdue.png" alt="Purdue Cybersecurity" class="cert-logo" width="100" height="100">
-                <h3>Applied Cybersecurity Essentials - Hybrid Intensive</h3>
-                <p>Purdue University</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience" class="section">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Senior Associate Consultant</h3>
-                <p class="company">Infosys</p>
-                <p class="date">December 2022 - Present</p>
-                <ul>
-                    <li>Conducted in-depth web application penetration testing, mobile penetration testing, ethical hacking, and DAST using Burp Suite and Nessus, identifying and exploiting 70+ security vulnerabilities.</li>
-                    <li>Performed DAST, source code review, and mobile penetration testing to identify vulnerabilities in web and mobile applications.</li>
-                    <li>Delivered detailed vulnerability reports with risk assessments, PoCs, and remediation steps, leading to a 30% reduction in potential breaches.</li>
-                    <li>Reduced false positives from automated DAST scanners through rigorous analysis, improving triage efficiency.</li>
-                    <li>Collaborated with development teams to implement secure coding practices, achieving a 90% reduction in repeat vulnerabilities within 6 months.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Associate</h3>
-                <p class="company">Cognizant Technology Solutions</p>
-                <p class="date">January 2020 - December 2022</p>
-                <ul>
-                    <li>Conducted VAPT for web applications and mobile apps, identifying critical security vulnerabilities.</li>
-                    <li>Executed penetration testing using Burp Suite, SQLmap, Nmap, and OWASP ZAP.</li>
-                    <li>Delivered actionable vulnerability reports with risk assessments, resulting in a 30% reduction in potential breaches.</li>
-                    <li>Reduced 60% of false positives from automated scanners through analysis, streamlining resolution processes.</li>
-                    <li>Collaborated with 20+ cross-functional teams to remediate vulnerabilities and enhance application security.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>BTECH</h3>
-                <p class="company">JNTUH</p>
-                <p class="date">2015-2019</p>
-                <p>Coursework: Java, Computer Networks, Algorithms, Database Management Systems, Principles of Programming Languages, Operating Systems, Information Security</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <h2><i class="fas fa-code"></i> Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Vulnerability Report Generator</h3>
-                <p>Automated tool for generating professional penetration testing reports in multiple formats (PDF, Word, Excel, HTML) with a single interface</p>
-                <ul>
-                    <li>Built with Python, Tkinter for GUI, and various document generation libraries</li>
-                    <li>Features severity highlighting, vulnerability templates, and smart defaults</li>
-                    <li>Saves hours on vulnerability documentation for security professionals</li>
-                </ul>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>Tkinter</span>
-                    <span>ReportLab</span>
-                    <span>FPDF2</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/nihaltikka/vulnerability-report-generator" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
+    <main id="top">
+        <!-- HEADER -->
+        <section class="resume-head">
+            <div class="container">
+                <div class="head-grid">
+                    <div class="head-intro">
+                        <div class="head-status">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            <span>Available for senior pentesting, bug bounty &amp; freelance engagements</span>
+                        </div>
+                        <div class="head-identity">
+                            <div class="head-photo-wrap">
+                                <img src="el_cazad0r.JPG" alt="Portrait of Nihal Tikka" class="head-photo" width="128" height="128">
+                                <span class="head-photo-ring" aria-hidden="true"></span>
+                            </div>
+                            <div class="head-name">
+                                <h1>Nihal Tikka</h1>
+                                <p class="head-title">Certified Ethical Hacker &amp; Azure Security Engineer</p>
+                                <p class="head-tagline">VAPT · Vulnerability Management · Bug Bounty Researcher</p>
+                                <p class="head-meta">He/Him · 6+ years · Hyderabad, India</p>
+                            </div>
+                        </div>
+                        <p class="head-lede">
+                            I help organizations across finance, healthcare, and other regulated industries identify
+                            and address security vulnerabilities before attackers can. Six years of manual web and
+                            mobile penetration testing, source code review, and bug bounty research — focused on
+                            real-world exploitability beyond what automated scanners catch.
+                        </p>
+                        <div class="head-actions">
+                            <a href="resume.pdf" download class="btn btn-primary">
+                                <i class="fas fa-download" aria-hidden="true"></i> Download Resume
+                            </a>
+                            <a href="#contact" class="btn btn-ghost">
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Get in Touch
+                            </a>
+                            <a href="https://github.com/nihaltikka" target="_blank" rel="noopener noreferrer" class="btn btn-link" aria-label="GitHub profile">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nihaltikka" target="_blank" rel="noopener noreferrer" class="btn btn-link" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://elcazad0r.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-link" aria-label="Medium blog">
+                                <i class="fab fa-medium" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <aside class="terminal" aria-hidden="true">
+                        <div class="terminal-bar">
+                            <span class="t-dot t-red"></span>
+                            <span class="t-dot t-yellow"></span>
+                            <span class="t-dot t-green"></span>
+                            <span class="t-title">nihal@pentest — zsh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="t-line"><span class="t-prompt">➜</span> <span class="t-path">~</span> whoami</div>
+                            <div class="t-line t-out">nihal.tikka · CEH · azure security engineer</div>
+                            <div class="t-line"><span class="t-prompt">➜</span> <span class="t-path">~</span> cat ./stats.log</div>
+                            <div class="t-line t-out"><span class="t-ok">[OK]</span> 6+ years manual VAPT &amp; bug bounty</div>
+                            <div class="t-line t-out"><span class="t-ok">[OK]</span> 70+ vulnerabilities exploited</div>
+                            <div class="t-line t-out"><span class="t-ok">[OK]</span> 5–7 criticals per engagement</div>
+                            <div class="t-line t-out"><span class="t-ok">[OK]</span> finance · healthcare · enterprise</div>
+                            <div class="t-line t-out"><span class="t-ok">[OK]</span> 90% recurring findings reduced</div>
+                            <div class="t-line t-out"><span class="t-ok">[OK]</span> 20+ dev teams collaborated</div>
+                            <div class="t-line"><span class="t-prompt">➜</span> <span class="t-path">~</span> ./engage <span class="t-cursor">█</span></div>
+                        </div>
+                    </aside>
                 </div>
             </div>
-            <div class="project-card">
-                <h3>Web Application Penetration Testing Framework</h3>
-                <p>Comprehensive web application security testing framework with automated vulnerability scanning capabilities</p>
-                <ul>
-                    <li>Implemented automated vulnerability scanning for OWASP Top 10</li>
-                    <li>Automated report generation with detailed remediation steps</li>
-                </ul>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="section" id="summary" aria-labelledby="summary-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">01 — About</span>
+                    <h2 id="summary-h">Detail-oriented.<br>Results-driven. <em>Collaborative.</em></h2>
+                </div>
+                <p class="lede">
+                    Certified Ethical Hacker and Azure Security Engineer with 6+ years specializing in Vulnerability
+                    Assessment &amp; Penetration Testing (VAPT), bug bounty hunting, and vulnerability management.
+                    I help organizations across finance, healthcare, and other regulated industries identify and
+                    address security vulnerabilities before attackers can — combining manual web and mobile
+                    pentesting, source code review, and business-logic testing to surface the complex flaws
+                    automated scanners miss.
+                </p>
+                <p class="lede">
+                    Proficient with Burp Suite, Nmap, Nessus, Nuclei, Onapsis, Splunk, SQLmap, and more. Proven
+                    track record delivering risk-driven reports with reproducible PoCs, reducing recurring
+                    vulnerabilities by 90%, and partnering with 20+ development teams to strengthen security
+                    posture. Detail-oriented, results-driven, and collaborative — open to senior engagements and
+                    freelance partnerships.
+                </p>
+                <dl class="stats">
+                    <div><dt>Years of experience</dt><dd>6<span class="count-unit">+</span></dd></div>
+                    <div><dt>Vulnerabilities exploited</dt><dd>70<span class="count-unit">+</span></dd></div>
+                    <div><dt>Dev teams partnered with</dt><dd>20<span class="count-unit">+</span></dd></div>
+                    <div><dt>Recurring findings reduced</dt><dd>90<span class="count-unit">%</span></dd></div>
+                </dl>
             </div>
-            <div class="project-card">
-                <h3>XSS Scanner</h3>
-                <p>Advanced Cross-Site Scripting (XSS) detection tool with comprehensive scanning capabilities</p>
-                <ul>
-                    <li>Scans for XSS in query params, path segments, POST data, headers, cookies, and DOM</li>
-                    <li>PyQt5 GUI for ease of use</li>
-                    <li>Advanced features: headless browsing, multithreading, pause/resume, progress tracking</li>
-                    <li>Detailed reporting, Telegram alerts, and save/load scan results</li>
-                </ul>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>PyQt5</span>
-                    <span>Selenium</span>
-                    <span>BeautifulSoup</span>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section section-alt" id="skills" aria-labelledby="skills-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">02 — Capabilities</span>
+                    <h2 id="skills-h">The stack I reach for <em>when things get serious.</em></h2>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-group">
+                        <h3><i class="fas fa-globe"></i> Offensive Security</h3>
+                        <ul>
+                            <li>Web application penetration testing</li>
+                            <li>Mobile penetration testing</li>
+                            <li>Source code review</li>
+                            <li>Business logic &amp; authorization testing</li>
+                            <li>API security testing</li>
+                            <li>Vulnerability assessment &amp; penetration testing (VAPT)</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <ul>
+                            <li>Burp Suite</li>
+                            <li>Nmap</li>
+                            <li>Nessus</li>
+                            <li>Nuclei</li>
+                            <li>SQLmap</li>
+                            <li>OWASP ZAP</li>
+                            <li>MobSF (Mobile Security Framework)</li>
+                            <li>Metasploit</li>
+                            <li>Onapsis (SAP security)</li>
+                            <li>Splunk (SIEM)</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3><i class="fas fa-shield-alt"></i> Methodology &amp; Soft Skills</h3>
+                        <ul>
+                            <li>OWASP Top 10 &amp; Secure SDLC</li>
+                            <li>Bug bounty &amp; vulnerability research</li>
+                            <li>CVSS-based risk prioritisation</li>
+                            <li>Executive reporting &amp; stakeholder translation</li>
+                            <li>Cross-functional collaboration</li>
+                            <li>Mentoring &amp; training</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <h2><i class="fas fa-address-card"></i> Contact</h2>
-        <div class="contact-info">
-            <a href="mailto:nihaltikka@gmail.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-                nihaltikka@gmail.com
-            </a>
-            <a href="tel:+918886669725" class="contact-item">
-                <i class="fas fa-phone"></i>
-                +91 8886669725
-            </a>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                Hyderabad
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience" aria-labelledby="exp-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">03 — Experience</span>
+                    <h2 id="exp-h">Six years in the trenches of <em>applied security.</em></h2>
+                </div>
+                <div class="jobs">
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>Senior Software Engineer</h3>
+                                <p class="job-company">CGI</p>
+                            </div>
+                            <span class="job-date">June 2025 – Present</span>
+                        </header>
+                        <ul>
+                            <li>Leading 7–8 end-to-end penetration testing engagements across web applications and APIs, covering the full attack lifecycle from reconnaissance to retest.</li>
+                            <li>Identified and validated 5–7 critical vulnerabilities (SQL injection, account takeover, authentication bypass) and multiple high-risk issues, prioritised using CVSS and business impact.</li>
+                            <li>Performing manual penetration testing and source code review to uncover business logic, authorization, and data-handling flaws beyond automated tools.</li>
+                            <li>Leveraging Burp Suite, SQLmap, and Nmap to support exploitation, session analysis, and input validation testing.</li>
+                            <li>Contributing to bug bounty programmes and delivering high-quality reports with reproducible PoCs, enabling effective remediation and validation.</li>
+                        </ul>
+                    </article>
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>Senior Associate Consultant</h3>
+                                <p class="job-company">Infosys</p>
+                            </div>
+                            <span class="job-date">December 2022 – June 2025</span>
+                        </header>
+                        <ul>
+                            <li>Conducted manual web and mobile penetration testing and DAST assessments, identifying and exploiting 70+ vulnerabilities across multiple client environments.</li>
+                            <li>Performed manual source code review and dynamic analysis to uncover business logic flaws, authentication weaknesses, and data exposure issues.</li>
+                            <li>Applied a bug bounty–driven approach, focusing on real-world exploitability and chaining vulnerabilities to demonstrate high-impact attack scenarios.</li>
+                            <li>Delivered risk-based vulnerability reports with reproducible PoCs, contributing to a 30% reduction in security risks.</li>
+                            <li>Improved triage efficiency by reducing false positives and collaborated with development teams on secure code reviews, achieving a 90% reduction in recurring vulnerabilities.</li>
+                            <li>Trained new joiners on SAP vulnerability management using Onapsis and Security Bridge tools.</li>
+                        </ul>
+                    </article>
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>Associate</h3>
+                                <p class="job-company">Cognizant Technology Solutions</p>
+                            </div>
+                            <span class="job-date">January 2020 – December 2022</span>
+                        </header>
+                        <ul>
+                            <li>Conducted manual VAPT across web and mobile applications, identifying critical vulnerabilities across diverse platforms.</li>
+                            <li>Performed manual testing and validation, supported by Burp Suite, SQLmap, Nmap, and OWASP ZAP, to uncover issues in authentication, session management, input validation, and business logic.</li>
+                            <li>Delivered risk-based vulnerability reports with detailed PoCs, contributing to a 30% reduction in security risks.</li>
+                            <li>Reduced 60% of false positives from automated scanners through in-depth analysis, improving triage accuracy and remediation efficiency.</li>
+                            <li>Collaborated with 20+ development teams to remediate vulnerabilities, accelerating resolution and strengthening application security posture.</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/nihaltikka" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/nihaltikka" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://elcazad0r.medium.com/" target="_blank" aria-label="Medium">
-                    <i class="fab fa-medium"></i>
-                </a>
+        <!-- PROJECTS -->
+        <section class="section section-alt" id="projects" aria-labelledby="proj-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">04 — Projects</span>
+                    <h2 id="proj-h">Tools I've built <em>to sharpen the craft.</em></h2>
+                </div>
+                <div class="projects">
+                    <article class="project">
+                        <header>
+                            <h3>XSS Scanner</h3>
+                            <span class="project-type">Python · Security Tool</span>
+                        </header>
+                        <p>Advanced Cross-Site Scripting (XSS) detection tool with comprehensive scanning capabilities across query parameters, path segments, POST data, headers, cookies, and the DOM.</p>
+                        <ul class="project-points">
+                            <li>PyQt5 desktop GUI for ease of use</li>
+                            <li>Headless browsing and multithreaded scan engine</li>
+                            <li>Pause/resume, progress tracking, save/load scan sessions</li>
+                            <li>Detailed reporting and real-time Telegram alerts</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Python</li>
+                            <li>PyQt5</li>
+                            <li>Selenium</li>
+                            <li>BeautifulSoup</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <header>
+                            <h3>Vulnerability Report Generator</h3>
+                            <span class="project-type">Python · Reporting Tool</span>
+                        </header>
+                        <p>Automated tool for generating professional penetration testing reports in PDF, Word, Excel, and HTML formats from a single interface — saving security teams hours on documentation.</p>
+                        <ul class="project-points">
+                            <li>Built with Python, Tkinter GUI, ReportLab &amp; FPDF2</li>
+                            <li>Severity highlighting, vulnerability templates, smart defaults</li>
+                            <li>Multi-format export from one source of truth</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Python</li>
+                            <li>Tkinter</li>
+                            <li>ReportLab</li>
+                            <li>FPDF2</li>
+                        </ul>
+                        <a href="https://github.com/nihaltikka/vulnerability-report-generator" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                    </article>
+                </div>
             </div>
-            <p>Designed & Built by Nihal Tikka</p>
-            <p>&copy; 2025 Nihal Tikka. All rights reserved.</p>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="section" id="certifications" aria-labelledby="cert-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">05 — Credentials</span>
+                    <h2 id="cert-h">Validated <em>by the people who set the bar.</em></h2>
+                </div>
+                <div class="certs">
+                    <article class="cert">
+                        <img src="CEH-logo.png" alt="Certified Ethical Hacker logo" loading="lazy">
+                        <div>
+                            <h3>CEH Master</h3>
+                            <p>Certified Ethical Hacker — EC-Council</p>
+                        </div>
+                    </article>
+                    <article class="cert">
+                        <img src="OIP.jpeg" alt="Microsoft Azure Security Engineer logo" loading="lazy">
+                        <div>
+                            <h3>Azure Security Engineer</h3>
+                            <p>Microsoft Certified</p>
+                        </div>
+                    </article>
+                    <article class="cert">
+                        <img src="purdue.png" alt="Purdue University logo" loading="lazy">
+                        <div>
+                            <h3>Applied Cybersecurity Essentials</h3>
+                            <p>Hybrid Intensive — Purdue University</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section section-alt" id="education" aria-labelledby="edu-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">06 — Education</span>
+                    <h2 id="edu-h">Where the <em>foundation was laid.</em></h2>
+                </div>
+                <article class="edu">
+                    <header class="edu-head">
+                        <div>
+                            <h3>Bachelor of Technology</h3>
+                            <p class="edu-inst">Jawaharlal Nehru Technological University, Hyderabad (JNTUH)</p>
+                        </div>
+                        <span class="edu-date">2015 – 2019</span>
+                    </header>
+                    <p class="edu-copy">
+                        Coursework: Java, Computer Networks, Algorithms, Database Management Systems,
+                        Principles of Programming Languages, Operating Systems, Information Security.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact" aria-labelledby="contact-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">07 — Contact</span>
+                    <h2 id="contact-h">Let's explore if <em>we're aligned.</em></h2>
+                </div>
+                <p class="lede">
+                    Open to senior penetration testing roles, bug bounty collaborations, freelance engagements,
+                    and advisory work across finance, healthcare, and other regulated industries. Drop a line
+                    about what you're building — I'll get back within a day.
+                </p>
+                <ul class="contact-grid">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:nihaltikka@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            nihaltikka@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+918886669725">
+                            <i class="fas fa-phone"></i>
+                            +91 88866 69725
+                        </a>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/nihaltikka" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                            linkedin.com/in/nihaltikka
+                        </a>
+                    </li>
+                    <li>
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/nihaltikka" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            github.com/nihaltikka
+                        </a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Medium</span>
+                        <a href="https://elcazad0r.medium.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-medium"></i>
+                            elcazad0r.medium.com
+                        </a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Location</span>
+                        <span class="contact-plain">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Hyderabad, India
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-row">
+            <p>© 2026 Nihal Tikka. All rights reserved.</p>
+            <ul class="footer-social">
+                <li><a href="https://www.linkedin.com/in/nihaltikka" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/nihaltikka" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://elcazad0r.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a></li>
+                <li><a href="mailto:nihaltikka@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+            </ul>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-  
