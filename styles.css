@@ -215,12 +215,6 @@ h3 {
 
 .body-col { max-width: 760px; }
 
-.lede {
-    font-size: 19px;
-    line-height: 1.6;
-    color: var(--ink);
-}
-
 .prose p + p { margin-top: 16px; }
 
 .label {
